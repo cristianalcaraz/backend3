@@ -30,5 +30,15 @@ export const generateUsers = (count = 10) => {
     }
     return users;
 };
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+
 
 export default __dirname;
+
+export const suma = (num1,num2) => {
+    if(typeof num1 !== 'number' || typeof num2 !== 'number') return 0
+    return num1 + num2
+} 

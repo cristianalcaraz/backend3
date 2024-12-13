@@ -1,0 +1,82 @@
+{
+  "aggregate": {
+    "counters": {
+      "vusers.created_by_name.0": 40,
+      "vusers.created": 40,
+      "http.requests": 40,
+      "plugins.metrics-by-endpoint./operacionesencilla.errors.ETIMEDOUT": 32,
+      "errors.ETIMEDOUT": 32,
+      "vusers.failed": 40,
+      "plugins.metrics-by-endpoint./operacionesencilla.errors.ENOTFOUND": 8,
+      "errors.ENOTFOUND": 8
+    },
+    "rates": {
+      "http.request_rate": 13
+    },
+    "firstCounterAt": 1734003729771,
+    "lastCounterAt": 1734003740747,
+    "firstMetricAt": 1734003729771,
+    "lastMetricAt": 1734003740747,
+    "period": 1734003740000,
+    "summaries": {},
+    "histograms": {}
+  },
+  "intermediate": [
+    {
+      "counters": {
+        "vusers.created_by_name.0": 10,
+        "vusers.created": 10,
+        "http.requests": 10
+      },
+      "rates": {
+        "http.request_rate": 10
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1734003729771,
+      "lastCounterAt": 1734003729996,
+      "firstMetricAt": 1734003729771,
+      "lastMetricAt": 1734003729996,
+      "period": "1734003720000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.0": 30,
+        "vusers.created": 30,
+        "http.requests": 30,
+        "plugins.metrics-by-endpoint./operacionesencilla.errors.ENOTFOUND": 8,
+        "errors.ENOTFOUND": 8,
+        "vusers.failed": 10,
+        "plugins.metrics-by-endpoint./operacionesencilla.errors.ETIMEDOUT": 2,
+        "errors.ETIMEDOUT": 2
+      },
+      "rates": {
+        "http.request_rate": 30
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1734003730020,
+      "lastCounterAt": 1734003739999,
+      "firstMetricAt": 1734003730020,
+      "lastMetricAt": 1734003739999,
+      "period": "1734003730000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "plugins.metrics-by-endpoint./operacionesencilla.errors.ETIMEDOUT": 30,
+        "errors.ETIMEDOUT": 30,
+        "vusers.failed": 30
+      },
+      "rates": {},
+      "firstCounterAt": 1734003740023,
+      "lastCounterAt": 1734003740747,
+      "firstMetricAt": 1734003740023,
+      "lastMetricAt": 1734003740747,
+      "period": "1734003740000",
+      "summaries": {},
+      "histograms": {}
+    }
+  ]
+}
