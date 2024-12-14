@@ -1,5 +1,5 @@
-import { Router } from 'express';
-import MaterialRouter from './materials.js';
+import { Router } from "express";
+import MaterialRouter from './routes/materials.js';
 
 const app = Router();
 
