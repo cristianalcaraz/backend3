@@ -8,15 +8,25 @@ import sessionsRouter from './routes/sessions.router.js';
 import mocksRouter from './routes/mocks.router.js';
 import mongoose from 'mongoose';
 import mainRouter from "./routes/index.js";
-import Config from "./config/index.js";
 import { connectDb } from "./db/db.js";
+import swaggerUiExpress from 'swagger-ui-express';
+import swaggerJsDoc from 'swagger-jsdoc';
+import MaterialRoutes from './routes/index.js';
+
+
+
+
+app.use('/api', MaterialRoutes); 
+
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
 
 
 
 //const PORT = Config.PORT || 8080;
 
 app.use(express.json());
-
 app.use("/api", mainRouter);
 
 connectDb().then(() => {
@@ -27,7 +37,22 @@ connectDb().then(() => {
 });
 
 
+const swaggerOptions = {
+  definition:{
+      openapi:'3.0.1',
+      info:{
+          title: 'Adopme api',
+          description: 'nuestra primera documentacion practicando con swagger'
+      }
+  },
+  apis:[`${__dirname}/docs/**/*.yaml`]
+}
 
+const specs = swaggerJsDoc(swaggerOptions)
+
+app.use('/apidocs',swaggerUiExpress.serve, swaggerUiExpress.setup(specs))
+app.use(express.json());
+app.use(cookieParser());
 
 app.use(addLogger)
 app.get('/', (req, res) => {

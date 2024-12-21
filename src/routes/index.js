@@ -1,8 +1,9 @@
-import { Router } from "express";
-import MaterialRouter from './routes/materials.js';
+import { Router } from 'express';
+import MaterialController from '../controllers/materials.js';  
 
 const app = Router();
 
-app.use('/materials', MaterialRouter);
 
-export default app;
+app.use('/materials', MaterialController);
+
+export default app; 

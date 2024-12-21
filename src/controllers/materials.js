@@ -1,5 +1,25 @@
+
 import { faker } from '@faker-js/faker';
-import { MaterialModel } from '../models/materials.js';
+import { MaterialModel } from '../dao/models/materials.js';
+
+
+// src/controllers/materials.js
+import { Router } from 'express';
+
+const router = Router();
+
+// Define a GET route for /materials
+router.get('/', (req, res) => {
+    res.json({ message: 'Here are all materials.' });
+});
+
+// Define other routes as needed
+router.get('/:id', (req, res) => {
+    const materialId = req.params.id;
+    res.json({ message: `Material with ID ${materialId}` });
+});
+
+export default router;  // Export the router
 
 export const getAll = async (req, res) => {
     const filters = {};
